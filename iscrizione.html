@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- iscrizione.html — il modulo pubblico (link per staff o corsisti). Niente accesso: chi apre il link si iscrive e basta. -->
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Iscrizione ai pasti</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFF8EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icona.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { padding: env(safe-area-inset-top) 0 40px; }
+    main { max-width: 520px; }
+    .is-testa { padding: 22px 0 6px; }
+    .is-testa .classe { font-size: 13px; font-weight: 600; color: var(--pomodoro); letter-spacing: .03em; text-transform: uppercase; }
+    .is-testa h1 { font-size: 26px; margin: 4px 0 2px; }
+    .is-testa .gruppo { font-size: 14px; color: var(--tenue); }
+    .is-intro { white-space: pre-line; color: var(--tenue); font-size: 15px; margin: 10px 0 4px; }
+    .is-pasto { background: var(--carta); border-radius: 16px; box-shadow: var(--ombra); padding: 14px; margin: 12px 0; }
+    .is-pasto h2 { font-size: 18px; margin: 0; }
+    .is-nota { font-size: 13px; color: var(--tenue); margin: 4px 0 10px; white-space: pre-line; }
+    .si-no { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .si-no button, .scegli button { border: 1.5px solid var(--linea); background: none; border-radius: 12px; padding: 12px; font-weight: 600; font-size: 15px; }
+    .si-no button.on[data-v="true"] { background: var(--basilico); border-color: var(--basilico); color: #fff; }
+    .si-no button.on[data-v="false"] { background: var(--rosso); border-color: var(--rosso); color: #fff; }
+    .extra { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--linea); }
+    .extra > label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+    .scegli { display: grid; gap: 8px; }
+    .scegli button.on { background: var(--pomodoro); border-color: var(--pomodoro); color: #fff; }
+    .passi { display: inline-flex; align-items: center; border: 1.5px solid var(--linea); border-radius: 12px; }
+    .passi button { border: 0; background: none; width: 44px; height: 42px; font-size: 20px; color: var(--tenue); }
+    .passi b { min-width: 36px; text-align: center; font-size: 17px; }
+    .campo-nome { width: 100%; border: 1.5px solid var(--linea); background: var(--carta); border-radius: 12px; padding: 13px 14px; font-size: 16px; }
+    .invia { width: 100%; margin-top: 16px; padding: 15px; font-size: 16px; }
+    .errore { color: var(--rosso); font-size: 14px; margin-top: 10px; }
+    .fatto { text-align: center; padding: 40px 10px; }
+    .fatto .grande { font-size: 54px; }
+  </style>
+</head>
+<body>
+  <main id="modulo"><p class="vuoto">Caricamento…</p></main>
+  <script type="module" src="iscrizione.js"></script>
+</body>
+</html>

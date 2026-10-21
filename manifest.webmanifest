@@ -1,0 +1,3 @@
+{ "name": "Pasti del weekend", "short_name": "Pasti", "start_url": "./", "scope": "./", "display": "standalone",
+  "background_color": "#FFF8EE", "theme_color": "#D9481C",
+  "icons": [{ "src": "icona-180.png", "sizes": "180x180", "type": "image/png" }, { "src": "icona.svg", "sizes": "any", "type": "image/svg+xml" }] }
